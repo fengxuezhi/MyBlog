@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>个人博客主页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.css" rel="stylesheet">
+	</head>
+
+	<body onload="show()">
+		<div class="jumbotron" style="margin: 0px">
+			<div class="container text-center" >
+				<h2>欢迎来到我的博客</h2>
+				<p>期待和大家交流</p>
+			</div>
+		</div>
+		
+		<div class="nav navbar-default  navbar-inverse" role="navigation">
+			<div class="navbar-header">
+				<button  type="button" class="navbar-toggle" data-toggle = "collapse" data-target = "#example-nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand">我的博客</a>
+			</div>
+			<div class="collapse navbar-collapse" id="example-nav-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active">
+						<a href="#">主页</a>
+					</li>
+					<li>
+						<a href="#">博客</a>
+					</li>
+					<li>
+						<a href="#">关于博主</a>
+					</li>
+					<li>
+						<a href="#">技术交流</a>
+						
+					</li>
+					<li>
+						<a href="#">生活笔记</a>
+					</li>
+					<li>
+						<a href="#">给我留言</a>
+					</li>
+				</ul>
+				<div class="col-sm-2 pull-right">
+				    <div class="input-group">              		 
+					  <input type="text" class="form-control" name="keyword" id="keyword" placeholder="请输入搜索的关键字" />
+					    <span class="input-group-btn">
+					        <button type="button" class="btn btn-default">
+					        	<span class="glyphicon glyphicon-search"></span>
+					        </button>
+					    </span>
+		            </div>
+		         </div>
+		         
+		    </div>
+		   </div>
+		
+		<form role="from">
+		   <div class="row" >
+			 <div class="col-sm-3 col-sm-offset-1 " >
+				<h3>关于我</h3>
+				<p>我的照片</p>
+				<a href="#" class="thumbnail">
+					<img src="img/cat02.jpg" />
+				</a>
+				<p>关于我的介绍</p>
+				<a href="https://blog.csdn.net/qq_45508349" target="_blank">个人主页</a>
+				<p>大家好，我是fxz，喜欢电影，音乐，小说</p>
+				<ul class="nav nav-pills nav-stacked">
+			    <li class="active">
+				       <a href="#">编程</a>
+		     	 </li>
+			     <li>
+				       <a href="#">动漫</a>
+			     </li>
+			     <li>
+			           <a href="#">电影</a>
+			      </li>
+		         </ul>
+			</div>
+			
+			
+				
+		<div class="col-sm-8 ">
+			
+			<div id="imgDiv">
+			   <img id="img1" src="img/cat02.jpg" style="display: none;" border="1" />
+			   <img id="img2" src="img/cat.jpg" style="display: none;" border="1" />
+			   <img id="img3" src="img/cat02.jpg" style="display: none;" border="1" />
+			   <img id="img4" src="img/cat.jpg" style="display: none;" border="1" />
+		    </div>
+		<div id="aDiv">
+			<a href="javascript:show(1)">1</a>&nbsp;
+			<a href="javascript:show(2)">2</a>&nbsp;
+			<a href="javascript:show(3)">3</a>&nbsp;
+			<a href="javascript:show(4)">4</a>
+		</div>
+			
+			
+			<div>
+				<div class="list-group">
+			<a href="#" class="list-group-item active">
+				<h4 class="list-group-item-heading">免费使用服务器</h4>
+			</a>
+			<a href="#" class="list-group-item">
+				<h4 class="list-group-item-heading">免费获取域名</h4>
+				<p class="list-group-item-text">
+					把该广告宣传十个群您将获取免费域名
+				</p>
+			</a>
+			<a href="#" class="list-group-item">
+				<h4 class="list-group-item-heading">7*24</h4>
+				<p class="list-group-item-text">
+					7*24小时服务支持
+				</p>
+			</a>
+			<a href="#" class="list-group-item">
+				<h4 class="list-group-item-heading">完整的售后服务</h4>
+				<p class="list-group-item-text">
+					我们的服务很好
+				</p>
+			</a>
+		</div>
+		
+			</div>
+				<h3>HTML技术</h3>
+				<p>html入门简介</p>
+				<!--<a href="#" class="thumbnail">
+					<img src="img/cat.jpg"/>
+				</a>-->
+				<p>近期，猪肉价格持续大幅上涨，</p>
+				</div>
+				<div>
+			    <br />
+			    <h2>HTML技术</h2>
+				<p>html入门简介</p>
+				<!--<a href="#" class="thumbnail">
+					<img src="img/cat.jpg" />
+				</a>-->
+				<p>近期，猪肉价格持续大幅上涨</p>
+			</div>
+		</div>
+		</form>
+		<div class="jumbotron " >
+			<div class="container text-center ">
+				<p>fxz&copy;1998-2020</p>
+			</div>
+		</div>
+	</body>
+		<script src="js/jquery-1.11.0.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script>
+		var nowShow = 1;
+		var sid;
+		function show(index){
+			//根据超链接的序号，显示指定的图片
+			if(Number(index)){
+				clearTimeout(sid);
+				nowShow =index;
+			}
+			//显示第一张图片，其他图片隐藏
+			for(var i=1;i<5;i++){
+				if(i==nowShow){
+				document.getElementById("img"+i).style.display="";
+			}else{	    	
+				document.getElementById("img"+i).style.display="none";
+			}
+		}
+			//设置下一张图片显示
+			if(nowShow==4){
+			       nowShow=1;
+			}else{
+				nowShow++;
+			}		
+			//轮播的间隔是3秒钟
+     		sid=setTimeout('show()',2000);
+		}
+	</script>
+</html>
